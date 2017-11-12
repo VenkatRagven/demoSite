@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang = "en" ng-app="hacker">
+<head>
+ <!-- META SECTION -->
+    <!-- <title>McaaS</title>       -->      
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<!-- CSS Include -->
+	<!-- <link rel="shortcut icon" href="templates/images/cast.ico" /> -->
+	
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<link rel="stylesheet" href="templates/css/font-awesome-4.7.0/css/font-awesome.min.css"/>
+	<link rel="stylesheet" href="templates/css/customStyle.css" />
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400i" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Dancing+Script:700" rel="stylesheet">
+
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src= "lib/bootstrap.js"></script>
+	<script src= "lib/customScript.js"></script>
+	
+</head>
+
+<body>
+	<div class="container boxShadow">
+		<div ui-view ="" class=""></div>
+	</div>	
+	<div id="mySidenav" class="sidenav">
+		<a href="javascript:void(0);" id="about">Facebook     <i class="fa fa-facebook-square socialShareIcons" aria-hidden="true"></i></a>
+		<a href="javascript:void(0);" id="blog">Twitter       <i class="fa fa-twitter-square socialShareIcons" aria-hidden="true"></i></a>
+		<a href="javascript:void(0);" id="projects">WhatsApp  <i class="fa fa-whatsapp socialShareIcons" aria-hidden="true"></i></a>
+		<a href="javascript:void(0);" id="contact">Mail <i class="fa fa-envelope socialShareIcons" aria-hidden="true"></i></a>
+	</div>
+
+	<script src= "lib/angular.js"></script>
+    <script src= "lib/angular-ui-router.js"></script>
+    <script src= "lib/angular-sanitize.js"></script>
+    
+	<script src= "config/app.js"></script>
+	<script src= "config/route.js"></script>
+	<script src= "controllers/homeController.js"></script>
+	<script src= "controllers/loginController.js"></script>
+	
+</body>
+</html>

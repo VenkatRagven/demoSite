@@ -1,0 +1,177 @@
+<nav class="container navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Bharatham Junction</a>
+    </div>
+    <!-- <div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="#section1">About us</a></li>
+            <li><a href="#section2">Events</a></li>
+            <li><a href="#section3">Contact us</a></li>
+      </ul>
+    </div>
+  </div> -->
+  </div>
+</nav>
+<div class="">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <img src="../templates/images/stage_01.png" alt="Los Angeles" style="width:100%;">
+        <div class="carousel-caption">
+          <h3>Madurai</h3>
+          <p>ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis ex ea commodo consequat.</p>
+          <p>Date: 24th Oct 2017</p>
+          <p>Venue: Madurai</p>
+          <p><button type="submit" class="btn btn-default btn-register">Register</button></p>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="../templates/images/stage_01.png" alt="Chicago" style="width:100%;">
+        <div class="carousel-caption">
+          <h3>Tirunelveli</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <p>Date: 24th Oct 2017</p>
+          <p>Venue: Tirunelveli</p>
+          <p><button type="submit" class="btn btn-default btn-register">Register</button></p>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="../templates/images/stage_01.png" alt="New York" style="width:100%;">
+        <div class="carousel-caption">
+          <h3>Tanjore</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <p>Date: 24th Oct 2017</p>
+          <p>Venue: Tanjore</p>
+          <p><button type="submit" class="btn btn-default btn-register">Register</button></p>
+        </div>
+      </div>
+    </div>
+    <!-- Left and right controls -->
+    <span class="left carousel-control" data-target="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+    </span>
+    <span class="right carousel-control" data-target="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+    </span>
+  </div>
+</div>
+<div class="row zeroMargin">
+
+  <div class="col-md-6 upcomingEvents">
+    <div class="row  zeroMargin marginTop50px">
+      <div class="col-md-12">
+        <p class="borderToBottom"><span class="headerText">Upcoming Events</span></p>
+      </div>
+    </div>
+    <div class="row ">
+      <div class="col-md-12 eventRow" ng-repeat="x in myData | limitTo:quantity">
+      <div class="post-date">
+        <div class="bottom-divider date-text">
+        <div class="date-text">{{ x.Date | monthFormat }}</div>
+        </div>
+        <div class="date-text top-divider">
+        <div class="date-text normal">{{ x.Date | dateFormat }}</div>
+        </div>
+      </div>
+      <div class='marginTop10px'>
+        <p class="fontSize26px"> {{ x.EventName | uppercase}} </p>
+        <div class="detailsBadge">
+          <p><i class="fa fa-map-marker" aria-hidden="true"></i> {{ x.Eventplace}},</p>
+          <p><i class="fa fa-location-arrow" aria-hidden="true"></i> {{ x.EventAddress}}.</p>
+          <p>{{ x.EventDetails }}</p>
+          <span class="badge" data-toggle="modal" data-target="#myModal">More Details</span>
+        </div>
+        <hr class="hr">
+      </div>
+      </div>
+    </div>    
+  </div>
+  <!-- second column -->
+  <div class="col-md-6 upcomingEvents">
+    <div class="row  zeroMargin marginTop50px">
+      <div class="col-md-12">
+        <p class="borderToBottom"><span class="headerText">Gallery</span></p>
+      </div>
+    </div>
+    <div class="row ">
+      <div class="col-md-12 eventRow" ng-repeat="x in myData | limitTo:quantity">
+      <div class="">
+        <a href="https://placeholder.com"><img src="http://via.placeholder.com/100x100" class="padding15px"></a>
+      </div>
+      <div class='marginTop10px'>
+        <p class="fontSize26px"> {{ x.EventName | uppercase}} </p>
+        <div class="detailsBadge">
+         <p><i class="fa fa-map-marker" aria-hidden="true"></i> {{ x.Eventplace}},</p>
+          <p><i class="fa fa-location-arrow" aria-hidden="true"></i> {{ x.EventAddress}}.</p>
+          <p>{{ x.EventDetails }}</p>
+          <span class="badge" data-toggle="modal" data-target="#myModal">More Details</span>
+        </div>
+        <hr class="hr">
+      </div>
+      <!-- Modal -->
+      <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">
+                <i class="fa fa-times-circle" aria-hidden="true"></i> 
+              </button>
+              <h4 class="modal-title">{{ x.EventName | uppercase}}</h4>
+            </div>
+            <div class="modal-body">
+              <p><i class="fa fa-map-marker" aria-hidden="true"></i> {{ x.Eventplace}},</p>
+              <p><i class="fa fa-location-arrow" aria-hidden="true"></i> {{ x.EventAddress}}.</p>
+              <p><i class="fa fa-calendar" aria-hidden="true"></i> {{ x.Date | monthFormat }} {{ x.Date | dateFormat }} </p>
+              <p>{{ x.EventDetails }}</p>
+              <p><h4>Gallery</h4></p>
+              <div class="item">
+                  <div class="row-fluid">
+                    <div class="span3">
+                      <a href="#x" class="thumbnail"><img src="http://placehold.it/100x100" alt="Image"  /></a>
+                      <a href="#x" class="thumbnail"><img src="http://placehold.it/100x100" alt="Image"  /></a>
+                    </div>
+                  </div><!--/row-fluid-->
+                </div><!--/item-->
+            </div>
+          </div>
+
+        </div>
+      </div>
+      </div>
+    </div>    
+  </div>
+</div>
+<div class='row zeroMargin'>
+  <h4>Our Sponsers</h4> 
+  <div class="sponsers">
+    <marquee>
+      <ul class="sponsersList">
+        <li>Sponser 1</li>
+        <li>Sponser 2</li>
+        <li>Sponser 3</li>
+        <li>Sponser 4</li>
+        <li>Sponser 5</li>
+        <li>Sponser 6</li>
+      </ul> 
+    </marquee>  
+  </div>
+</div>
+
