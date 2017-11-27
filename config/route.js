@@ -6,6 +6,12 @@ hackerHack.config(function($stateProvider,$urlRouterProvider){
 			templateUrl : 'templates/home.html'
 		
 	})
+	$stateProvider.state('main',{
+			url: '/main',
+			controller : 'homeController',
+			templateUrl : 'templates/mainPage.html'
+		
+	})
 	$stateProvider.state('login',{
 			url: '/login',
 			controller : 'loginController',
